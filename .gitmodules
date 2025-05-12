@@ -1,0 +1,3 @@
+[submodule "libs/int128"]
+	path = libs/int128
+	url = https://github.com/martint/int128.git
