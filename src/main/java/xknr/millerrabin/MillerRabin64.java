@@ -6,7 +6,7 @@ import org.weakref.int128.Int128;
 import org.weakref.int128.Int128Holder;
 import org.weakref.int128.Int128Math;
 
-import static xknr.util.BigInt.*;
+import static xknr.euler.util.BigInt.*;
 
 public class MillerRabin64
 {

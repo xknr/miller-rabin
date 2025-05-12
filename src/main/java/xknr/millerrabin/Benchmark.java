@@ -1,6 +1,6 @@
 package xknr.millerrabin;
 
-import static xknr.util.BigInt.*;
+import static xknr.euler.util.BigInt.*;
 
 import java.math.BigInteger;
 import java.util.function.Predicate;

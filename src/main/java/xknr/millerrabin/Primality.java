@@ -1,7 +1,7 @@
 package xknr.millerrabin;
 
 import java.math.BigInteger;
-import static xknr.util.BigInt.*;
+import static xknr.euler.util.BigInt.*;
 
 public class Primality
 {

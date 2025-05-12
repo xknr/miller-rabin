@@ -56,9 +56,6 @@ tasks.test {
     }
 }
 
-
-
-
 tasks.register<JavaExec>("runExhaustiveMRTest") {
     group = "application"
     description = "Run exhaustive test for miller rabin code"
@@ -75,7 +72,13 @@ tasks.register<JavaExec>("runBench") {
     mainClass.set("xknr.millerrabin.Benchmark")
 }
 
-
 sourceSets["main"].java.srcDirs(
+    "../eulerutil/src/main/java",
     "libs/int128/src/main/java"
 )
+ 
+
+sourceSets["test"].java.srcDirs(
+    "../eulerutil/src/test/java"
+)
+

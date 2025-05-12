@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 import xknr.euler.primes.SieveEratBitVector;
 
-import static xknr.util.BigInt.*;
+import static xknr.euler.util.BigInt.*;
 
 import java.util.function.Predicate;
 
