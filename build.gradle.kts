@@ -73,12 +73,12 @@ tasks.register<JavaExec>("runBench") {
 }
 
 sourceSets["main"].java.srcDirs(
-    "../eulerutil/src/main/java",
+    "libs/eulerutil/src/main/java",
     "libs/int128/src/main/java"
 )
  
 
 sourceSets["test"].java.srcDirs(
-    "../eulerutil/src/test/java"
+    "libs/eulerutil/src/test/java"
 )
 

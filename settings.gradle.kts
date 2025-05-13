@@ -12,4 +12,4 @@ plugins {
 
 rootProject.name = "millerrabin"
 include("app")
-includeBuild("../eulerutil")
+includeBuild("libs/eulerutil")
