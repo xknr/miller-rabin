@@ -1,6 +1,6 @@
 [submodule "libs/int128"]
 	path = libs/int128
 	url = https://github.com/martint/int128.git
-[submodule "libs/eulerutil"]
-	path = libs/eulerutil
-	url = https://github.com/xknr/eulerutil.git
+[submodule "libs/euler-util"]
+	path = libs/euler-util
+	url = https://github.com/xknr/euler-util.git
