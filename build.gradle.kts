@@ -56,16 +56,14 @@ tasks.test {
     }
 }
 
-tasks.register<JavaExec>("runExhaustiveMRTest") {
+tasks.register<JavaExec>("runExhaustiveTest") {
     group = "application"
     description = "Run exhaustive test for miller rabin code"
     classpath = sourceSets["main"].runtimeClasspath
     mainClass.set("xknr.millerrabin.MillerRabinExhaustive")
 }
 
-
-
-tasks.register<JavaExec>("runBench") {
+tasks.register<JavaExec>("runBenchmark") {
     group = "application"
     description = "Run benchmarks miller rabin code"
     classpath = sourceSets["main"].runtimeClasspath
