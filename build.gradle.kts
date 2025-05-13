@@ -27,7 +27,7 @@ dependencies {
 
     // This dependency is used by the application.
     implementation(libs.guava)
-    implementation("xknr.euler:eulerutil:1.0.0")
+    implementation("xknr.euler:euler-util:1.0.0")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -73,12 +73,12 @@ tasks.register<JavaExec>("runBench") {
 }
 
 sourceSets["main"].java.srcDirs(
-    "libs/eulerutil/src/main/java",
+    "libs/euler-util/src/main/java",
     "libs/int128/src/main/java"
 )
  
 
 sourceSets["test"].java.srcDirs(
-    "libs/eulerutil/src/test/java"
+    "libs/euler-util/src/test/java"
 )
 

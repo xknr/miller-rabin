@@ -10,6 +10,6 @@ plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.9.0"
 }
 
-rootProject.name = "millerrabin"
+rootProject.name = "miller-rabin"
 include("app")
-includeBuild("libs/eulerutil")
+includeBuild("libs/euler-util")
