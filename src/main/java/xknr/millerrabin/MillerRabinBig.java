@@ -6,7 +6,6 @@ import static xknr.euler.util.BigInt.*;
 
 public class MillerRabinBig
 {	
-  
   // Below this, {2} is enough.
   private static final BigInteger LIMIT1 = B(2047);
   

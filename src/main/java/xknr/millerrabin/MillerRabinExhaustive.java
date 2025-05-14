@@ -21,9 +21,6 @@ public class MillerRabinExhaustive {
   private static final long sieveMax = 10_000_000_000L;
   private static SieveEratBitVector sieve;
 
-  private static final int THREAD_COUNT = 12;
-  private static final long CHUNK_SIZE = 1000_000;
-
   private static final MillerRabin32 m32 = new MillerRabin32();
   private static final MillerRabin64Limited m64lim = new MillerRabin64Limited();
   private static final MillerRabin64 m64 = new MillerRabin64();
@@ -35,8 +32,12 @@ public class MillerRabinExhaustive {
   private static final Predicate<BigInteger> primalityTestBig = x -> mbig.isPrime(x);
   private static final Predicate<BigInteger> primalityVerifySieve = x -> sieve.isPrime(x.longValueExact());
 
-  private static final int CERTAINITY = 50;
+  private static final int CERTAINITY = 30;
   private static final Predicate<BigInteger> primalityVerifyProb = x -> x.isProbablePrime(CERTAINITY);  
+
+  private static final int THREAD_COUNT = 12;
+  private static final long CHUNK_SIZE = 1000_000;
+
 
   public static void main(String[] args) throws InterruptedException {
     new MillerRabinExhaustive().run();
@@ -44,6 +45,7 @@ public class MillerRabinExhaustive {
 
   public void run() {
     try {
+      // ENTER IMPLEMENTATION HERE:
       Predicate<BigInteger> primalityFunc = primalityTest64;
       testMillerMT(primalityFunc);
     } catch(InterruptedException e) {
@@ -57,6 +59,7 @@ public class MillerRabinExhaustive {
 
     Predicate<BigInteger> primalityVerify;
 
+    // ENTER RANGE HERE (May need to set sieveMax too):
     BigInteger beg = B(9_000_000_000L);
     BigInteger end = B(sieveMax);
 

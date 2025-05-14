@@ -1,0 +1,43 @@
+# Miller-Rabin Primality Test Implementation
+
+An implementation of the Miller-Rabin primality test algorithm in Java. 
+
+## About the Project
+
+For now, it only uses a built-in set of witnesses and decides witness set depending on input number.
+
+The witness sets chosen by the program are ones guaranteed to give a certain result for the input number. It does not involve a probabilistic result.
+
+An option to use a custom witness set will be included.
+
+Four versions of the same algorithm are included. Versions which use fewer bits in the inputs are slightly more efficient but have a limited range.
+
+MillerRabin32 accepts any int.
+MillerRabin64Limited accepts a long <= 3_037_001_057L 
+MillerRabin64 accepts any long.
+MillerRabinBig accepts any BigInteger (currently < 3317044064679887385961981)
+
+There is also Primality.isPrime which does triage amongs implementations depending on n.
+
+## Installation
+
+This project requires xknr/euler-utils library in a sibling directory.
+
+Sample run:
+mkdir miller-rabin-parent
+cd miller-rabin-parent
+git clone https://github.com/xknr/miller-rabin.git
+git clone https://github.com/xknr/euler-utils.git
+cd miller-rabin
+./gradlew test
+./gradlew runBenchmark
+./gradlew runExhaustiveTest
+
+## Gradle Targets
+runBenchmark compares running times of four versions vs BigInteger.isProbablePrime with certainity=30.
+runExhaustiveTest runs one of the implementations for all numbers within a range. Implentation and range has to be entered manually in the code.
+
+## TODO
+Add an option to use custom set of witnesses.
+Make runExhaustiveTest controllable with parameters (implementation and range).
+Add an implementation which wraps BigInteger.isProbablePrime for convenience.
