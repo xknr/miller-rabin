@@ -12,4 +12,4 @@ plugins {
 
 rootProject.name = "miller-rabin"
 include("app")
-includeBuild("libs/euler-util")
+includeBuild("../euler-util")
